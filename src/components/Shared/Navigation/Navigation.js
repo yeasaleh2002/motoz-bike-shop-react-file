@@ -32,9 +32,9 @@ const Navigation = () => {
 
                 <Grid container spacing={2}>
                 <Grid item style={{ ...verticalCenter, textAlign: 'left' }} xs={12} md={4}>
-                <img style={{ width: '65px', height: '50px', borderRadius: "50%", marginRight: '12px' }} src="https://i0.wp.com/www.differencebetween.com/wp-content/uploads/2011/06/Difference-Between-Scooter-and-Motorbike_Motorbike.jpg"  alt="bike" />
+                <img style={{ width: '65px', height: '50px', borderRadius: "50%", marginRight: '12px' }} src="https://i.ibb.co/QfgMyDy/Screenshot-155.png"  alt="bike" />
                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                       MOTOZ
+                       MoToZ
                     </Typography>
                 </Grid>
                 <Grid item xs={12} md={8} style={verticalCenter} >

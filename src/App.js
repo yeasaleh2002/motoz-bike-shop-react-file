@@ -13,12 +13,14 @@ import Contact from './components/Home/Contact/Contact/Contact';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Footer from './components/Shared/Footer/Footer';
 import Navigation from './components/Shared/Navigation/Navigation';
+import AuthProvider from './contexts/AuthProvider/AuthProvider';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 
 
 function App() {
   return (
     <div className="App">
-    
+      <AuthProvider>
         <Router>
 
               <Navigation/>
@@ -33,9 +35,9 @@ function App() {
                   <Home />
                 </Route>
 
-                <Route path="/products">
+                <PrivateRoute path="/products">
                   <Products />
-                </Route>
+                </PrivateRoute>
 
                 <Route path="/contact">
                   <Contact />
@@ -62,6 +64,7 @@ function App() {
               <Footer></Footer>
 
             </Router>
+         </AuthProvider>
     </div>
   );
 }

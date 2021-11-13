@@ -12,7 +12,6 @@ const Contact = () => {
             <Grid  sx={{p: 5}} container spacing={2}>
                 <Grid  item  xs={12} md={6}>
 
-
                 <Grid  sx={{p: 5}} container spacing={2}>
                            {/* dhaka office */}
                          <Grid  sx={{fontSize: 18}} item  xs={12} md={6}>                      

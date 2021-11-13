@@ -30,7 +30,7 @@ const Footer = () => {
                      
                
                 <Grid sx={{ mt: 2 ,mb: 3}} item xs={12} md={3}>
-                    <img style={{ width: '100%', height: '100%', borderRadius: "20px" }} src="https://www.cmcbikes.com/img/stores/2/1.jpg?w=818"  alt="bike" />
+                    <img style={{ width: '100%', height: '100%', borderRadius: "20px" }} src="https://i.ibb.co/QfgMyDy/Screenshot-155.png"  alt="bike" />
                 </Grid>
 
 

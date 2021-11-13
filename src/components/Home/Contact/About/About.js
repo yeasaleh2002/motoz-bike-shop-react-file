@@ -69,7 +69,7 @@ const About = () => {
                     </Box>
                 </Grid>
                 <Grid  sx={{mt: 7, mb: 3}} item xs={12} md={6} >
-                    <img  style={{ width: '100%', borderRadius: '10px' }} src="http://4.bp.blogspot.com/-jCvvsMS8910/UysyUTzeRxI/AAAAAAAAAME/XMjChGWk0GI/s1600/Geza+Motorcycle+Cover+Garage+2.jpg"  alt="bike" />
+                    <img  style={{ width: '100%', borderRadius: '10px' }} src="https://i.ibb.co/QfgMyDy/Screenshot-155.png"  alt="bike" />
                 </Grid>
             </Grid>
          </Container>
