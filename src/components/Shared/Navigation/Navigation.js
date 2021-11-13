@@ -42,7 +42,6 @@ const Navigation = () => {
                     
                 <Link  style={{textDecoration: 'none', color: 'white'}}  to="/home"> <Button color="inherit">Home</Button> </Link>
                     <Link  style={{textDecoration: 'none', color: 'white'}}  to="/products"> <Button color="inherit">Products</Button> </Link>
-                    <Link  style={{textDecoration: 'none', color: 'white'}}  to="/blogs"> <Button color="inherit">Blogs</Button> </Link>
                     <Link  style={{textDecoration: 'none', color: 'white'}}  to="/contact"> <Button color="inherit">Contact</Button> </Link>
                     <Link  style={{textDecoration: 'none', color: 'white'}}  to="/dashboard"> <Button color="inherit">Dashboard</Button> </Link>
                     <Link  style={{textDecoration: 'none', color: 'white'}}  to="/login"> <Button color="inherit">Login</Button> </Link>

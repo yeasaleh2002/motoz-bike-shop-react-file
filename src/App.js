@@ -9,7 +9,6 @@ import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import NotFound from './components/NotFound/NotFound';
 import Products from './components/Products/Products/Products';
-import Blogs from './components/Home/Blogs/Blogs';
 import Contact from './components/Home/Contact/Contact/Contact';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Footer from './components/Shared/Footer/Footer';
@@ -36,10 +35,6 @@ function App() {
 
                 <Route path="/products">
                   <Products />
-                </Route>
-
-                <Route path="/blogs">
-                  <Blogs />
                 </Route>
 
                 <Route path="/contact">
