@@ -6,8 +6,7 @@ import Rating from '../Rating/Rating';
 
 const Home = () => {
     return (
-        <div>
-         
+        <div>        
             <Banner></Banner>
             <Products></Products>
             <Rating></Rating>

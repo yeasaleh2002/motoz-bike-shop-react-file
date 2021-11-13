@@ -7,7 +7,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 
 
-
+     /* data details */
 const itemData = [
     {
       img: 'https://www.banglamotor.net/images/logo/honda_bikes_logo.jpg',
@@ -46,15 +46,15 @@ const itemData = [
 
 
 
-
-
 const About = () => {
     return (
         <div>
-           <Container  sx={{ flexGrow: 1 }}>
-          
-          {/* dreams  */}
+
+            {/*Our dreams  Parts*/}
+           <Container  sx={{ flexGrow: 1 }}>       
             <Grid  sx={{p: 5}} container spacing={2}>
+               
+               {/* Our dream description part*/}
                 <Grid  item  xs={12} md={6}>
                     <Box sx={{p: 2}}>
                         <Typography variant="h4" sx={{mb: 2, color: 'red'}}>
@@ -68,19 +68,25 @@ const About = () => {
                       </Typography>
                     </Box>
                 </Grid>
+
+                {/* Our dream image part */}
                 <Grid  sx={{mt: 7, mb: 3}} item xs={12} md={6} >
-                    <img  style={{ width: '100%', borderRadius: '10px' }} src="https://i.ibb.co/QfgMyDy/Screenshot-155.png"  alt="bike" />
+                    <img  style={{ width: '100%', borderRadius: '10px' }} src="https://i.ibb.co/gvhYczz/Screenshot-192.png"  alt="bike" />
                 </Grid>
             </Grid>
          </Container>
 
 
-{/* safety packages */}
+         {/* safety packages */}
            <Container  sx={{ flexGrow: 1 }}>
-            <Grid  sx={{p: 5}} container spacing={2}>
-            <Grid  sx={{mt: 4, mb: 3}} item xs={12} md={6} >
+             <Grid  sx={{p: 5}} container spacing={2}>
+              
+              {/* safety packages image*/}
+               <Grid  sx={{mt: 4, mb: 3}} item xs={12} md={6} >
                     <img  style={{ width: '100%', borderRadius: '10px' }} src="https://i.pinimg.com/474x/3e/ff/21/3eff210599a3224d27b5a06e64c139b2.jpg"  alt="bike" />
                 </Grid>
+
+                {/* safety packages description*/}
                 <Grid  item  xs={12} md={6}>
                     <Box sx={{p: 2}}>
                         <Typography variant="h4" sx={{mb: 2, color: 'red'}}>
@@ -88,18 +94,19 @@ const About = () => {
                         </Typography>
                      
                         <Typography  sx={{ my: 3, fontSize: 18, fontWeight: 400}}>
-                        In Bangladesh, the number of road casualties is not low, every year 12,000 road accidents happening and 35 thousand peoples are injured in road accidents in Bangladesh. Of these, a significant number of motorcycle accidents, such as a total of 3349 road accidents the 720 are motorcycle accidents in the year of 2017. As a result of this casualties, each family faces unheard damage. However, here we mentioned awareness about safety motorcycle riding. One of our main objectives is to reduce the road accident in Bangladesh. 
-                         </Typography>
+                             In Bangladesh, the number of road casualties is not low, every year 12,000 road accidents happening and 35 thousand peoples are injured in road accidents in Bangladesh. Of these, a significant number of motorcycle accidents, such as a total of 3349 road accidents the 720 are motorcycle accidents in the year of 2017. As a result of this casualties, each family faces unheard damage. However, here we mentioned awareness about safety motorcycle riding. One of our main objectives is to reduce the road accident in Bangladesh. 
+                        </Typography>
                     </Box>
-                </Grid>
-                
+                </Grid>                
             </Grid>
          </Container>
 
 
-{/* parter list */}
+       {/* parter list */}
          <Container  sx={{ flexGrow: 1 }}>
             <Grid  sx={{p: 5}} container spacing={2}>
+              
+                   {/* parter list description*/}
                 <Grid  item  xs={12} md={6}>
                     <Box sx={{p: 2}}>
                         <Typography variant="h4" sx={{mb: 2, color: 'red'}}>
@@ -114,6 +121,7 @@ const About = () => {
                     </Box>
                 </Grid>
              
+                  {/* parter list image part*/}
                 <Grid  sx={{mt: 7, mb: 3}} item xs={12} md={6} >
                 <ImageList sx={{ width: 400, height: 350 }} cols={2} rowHeight={200}>
                     {itemData.map((item) => (

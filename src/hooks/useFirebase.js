@@ -48,14 +48,15 @@ const useFirebase = () => {
         history.replace('/');
 
 
-
         //send name to firebase after creation
         updateProfile(auth.currentUser, {
           displayName: name
        
-        }).then(() => {
+        })
+        .then(() => {
           
-        }).catch((error) => {
+        })
+        .catch((error) => {
          
         });
         
@@ -102,18 +103,15 @@ const useFirebase = () => {
      //------ observe user state- onAuthStateChanged  usages by useEffect
         useEffect( () => {
           const unsubscribe = onAuthStateChanged(auth, (user) => {
-                if (user) {
-        
+                if (user) {       
                   setUser(user);
-                }
-                
+                }               
                else {
                   setUser({})
                 }
                  
                   //set is loading using
-                  setIsLoading(false);
-                  
+                  setIsLoading(false);                 
               });
                return () => unsubscribe;
         } , [])

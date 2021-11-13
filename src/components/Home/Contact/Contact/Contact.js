@@ -6,13 +6,15 @@ const Contact = () => {
     return (
         <div  style={{ backgroundColor: 'whitesmoke'}}>
             
+            {/* about part */}
             <About></About>
                  
              
+             {/* contact part  */}
             <Grid  sx={{p: 5}} container spacing={2}>
                 <Grid  item  xs={12} md={6}>
 
-                <Grid  sx={{p: 5}} container spacing={2}>
+                  <Grid  sx={{p: 5}} container spacing={2}>
                            {/* dhaka office */}
                          <Grid  sx={{fontSize: 18}} item  xs={12} md={6}>                      
                          <h2 >Dhaka Office</h2>
@@ -78,7 +80,7 @@ const Contact = () => {
                 </form>
 
             </Grid>
-            </Grid>
+          </Grid>
 
         </div>
     );

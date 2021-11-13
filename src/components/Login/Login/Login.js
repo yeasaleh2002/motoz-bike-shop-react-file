@@ -43,8 +43,8 @@ const Login = () => {
         <div>
 
              <Container>
-                 <Grid container spacing={2}>
-                     <Grid sx={{mt: 8}} item xs={12} md={6}>
+                 <Grid sx={{my: 8}} container spacing={2}>
+                     <Grid  item xs={12} md={6}>
                        <Typography sx={{fontSize: '49px', fontWeight: 'bold' }}  variant="body1" gutterBottom>Login</Typography>  
 
                        <form onSubmit={handleLoginSubmit}>
@@ -90,7 +90,7 @@ const Login = () => {
 
 
                      <Grid sx={{mb: 5, p: 3}} item xs={12} md={6}>
-                        <img  style={{width: "100%", height: "100%"}}  src="https://www.resizepixel.com/Image/b605664c36/Preview/login.png?v=3e2ae24e-6acf-489a-9e41-e32737262b61" alt="login"/>
+                        <img  style={{width: "100%", height: "100%"}}  src="https://i.ibb.co/h9Dw30t/login.png" alt="login"/>
                      </Grid>
                  </Grid>
              </Container>

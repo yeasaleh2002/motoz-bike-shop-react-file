@@ -18,7 +18,9 @@ const Banner = () => {
     return (
         <div className="banner" >
         <Container  sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
+            <Grid sx={{p:8}} container spacing={2}>
+                
+                {/* banner discription */}
                 <Grid item style={{ ...verticalCenter, textAlign: 'left' }} xs={12} md={6}>
                     <Box>
                         <Typography sx={{fontWeight: 500 }} variant="h3">
@@ -31,8 +33,10 @@ const Banner = () => {
                         <Link  style={{textDecoration: 'none'}}  to="/products"> <Button variant="contained"  style={{ backgroundColor: '#5CE7ED' }} color="inherit">Products</Button> </Link>
                     </Box>
                 </Grid>
+
+                {/* banner image */}
                 <Grid item xs={12} md={6} style={verticalCenter} >
-                    <img style={{ width: '350px' }} src="https://i0.wp.com/www.differencebetween.com/wp-content/uploads/2011/06/Difference-Between-Scooter-and-Motorbike_Motorbike.jpg"  alt="bike" />
+                    <img style={{ width: '100%', borderRadius: '5px' }} src="https://i0.wp.com/www.differencebetween.com/wp-content/uploads/2011/06/Difference-Between-Scooter-and-Motorbike_Motorbike.jpg"  alt="bike" />
                 </Grid>
 
             </Grid>

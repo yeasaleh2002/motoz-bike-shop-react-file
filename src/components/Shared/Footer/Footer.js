@@ -8,11 +8,11 @@ import { NavLink } from 'react-router-dom';
 const Footer = () => {
     return (
        <Box>
-          <Box   sx={{ backgroundColor: '#292B2C'  }}>
+          <Box sx={{ backgroundColor: '#292B2C'  }}>
            <Container>
              <Grid container spacing={3}>
 
-                   
+                   {/* contact info part */}
                 <Grid item xs={12} md={3}>                   
                      <Typography variant="h5" sx={{ mb: 5, mt: 2  }} style={{ color: 'whitesmoke' }}>
                          CONTACT INFO
@@ -28,12 +28,14 @@ const Footer = () => {
                      </Typography>                    
                 </Grid>
                      
-               
+
+               {/* motoz image */}
                 <Grid sx={{ mt: 2 ,mb: 3}} item xs={12} md={3}>
-                    <img style={{ width: '100%', height: '100%', borderRadius: "20px" }} src="https://i.ibb.co/QfgMyDy/Screenshot-155.png"  alt="bike" />
+                    <img style={{ width: '100%', height: '100%', borderRadius: "20px" }} src="https://i.ibb.co/gvhYczz/Screenshot-192.png"  alt="bike" />
                 </Grid>
 
 
+                 {/* how to buy part */}
                 <Grid item xs={12} md={3}>
                         <Typography variant="h5" sx={{ mb: 4, mt: 2 }} style={{ color: 'whitesmoke' }}>
                             HOW TO BUY
@@ -56,6 +58,8 @@ const Footer = () => {
                         </Typography>                       
                 </Grid>
               
+
+              {/* message us part */}
                 <Grid item  xs={12} md={3}>
                         <Typography variant="h5"  style={{ color: 'whitesmoke' }}>
                             Message Us
@@ -72,6 +76,7 @@ const Footer = () => {
               </Container>
            </Box>
              
+             {/* footer last part */}
                 <Box sx={{paddinTop: '20px'}}> 
                         <Typography variant="h5" style={{ color: 'white' , background: '#40383A', padding: '30px' }}>
                            Copyright © 2021 MOTOZ by Saleh. All rights reserved.
