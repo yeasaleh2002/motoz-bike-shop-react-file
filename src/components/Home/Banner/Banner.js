@@ -1,0 +1,41 @@
+import React from 'react';
+import Grid from '@mui/material/Grid';
+import { Typography, Button, Container } from '@mui/material';
+import Box from '@mui/material/Box';
+import { Link } from 'react-router-dom';
+
+
+
+const verticalCenter = {
+    display: 'flex',
+    alignItems: 'center',
+    height: 400
+}
+
+
+const Banner = () => {
+    return (
+        <Container  sx={{ flexGrow: 1 }}>
+            <Grid container spacing={2}>
+                <Grid item style={{ ...verticalCenter, textAlign: 'left' }} xs={12} md={6}>
+                    <Box>
+                        <Typography variant="h3">
+                            Buy Your Favourite <br />
+                            Bike 
+                        </Typography>
+                        <Typography variant="h6" sx={{ my: 3, fontSize: 13, fontWeight: 300, color: 'gray' }}>
+                        A motorcycle, often called a motorbike, bike, or cycle, is a two- or three-wheeled motor vehicle. Motorcycle design varies greatly to suit a range of different purposes: long-distance travel, commuting, cruising, sport, and off-road riding.
+                        </Typography>
+                        <Link  style={{textDecoration: 'none'}}  to="/products"> <Button variant="contained"  style={{ backgroundColor: '#5CE7ED' }} color="inherit">Products</Button> </Link>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={6} style={verticalCenter} >
+                    <img style={{ width: '350px' }} src="https://i0.wp.com/www.differencebetween.com/wp-content/uploads/2011/06/Difference-Between-Scooter-and-Motorbike_Motorbike.jpg"  alt="bike" />
+                </Grid>
+
+            </Grid>
+        </Container>
+    );
+};
+
+export default Banner;

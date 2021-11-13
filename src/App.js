@@ -1,23 +1,72 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Home from './components/Home/Home/Home';
+import Login from './components/Login/Login/Login';
+import Register from './components/Login/Register/Register';
+import NotFound from './components/NotFound/NotFound';
+import Products from './components/Products/Products/Products';
+import Blogs from './components/Home/Blogs/Blogs';
+import Contact from './components/Home/Contact/Contact/Contact';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import Footer from './components/Shared/Footer/Footer';
+import Navigation from './components/Shared/Navigation/Navigation';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+        <Router>
+
+              <Navigation/>
+
+              <Switch>
+
+              <Route exact path="/">
+                  <Home />
+                </Route>
+
+                <Route path="/home">
+                  <Home />
+                </Route>
+
+                <Route path="/products">
+                  <Products />
+                </Route>
+
+                <Route path="/blogs">
+                  <Blogs />
+                </Route>
+
+                <Route path="/contact">
+                  <Contact />
+                </Route>
+
+                <Route path="/dashboard">
+                  <Dashboard />
+                </Route>
+                               
+                <Route path="/login">
+                  <Login />
+                </Route>
+
+                <Route path="/register">
+                  <Register />
+                </Route>
+
+                <Route path="*">
+                  <NotFound></NotFound>
+                </Route>
+                
+              </Switch>
+              
+              <Footer></Footer>
+
+            </Router>
     </div>
   );
 }
