@@ -122,7 +122,7 @@ const About = () => {
                 </Grid>
              
                   {/* parter list image part*/}
-                <Grid  sx={{mt: 7, mb: 3}} item xs={12} md={6} >
+                <Grid  sx={{mt: 7, mb: 3,display: 'flex',  alignItems: 'center',  justifyContent: 'center'}} item xs={12} md={6} >
                 <ImageList sx={{ width: 400, height: 350 }} cols={2} rowHeight={200}>
                     {itemData.map((item) => (
                         <ImageListItem key={item.img}>

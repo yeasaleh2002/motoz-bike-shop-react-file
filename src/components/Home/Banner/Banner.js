@@ -23,7 +23,7 @@ const Banner = () => {
                 {/* banner discription */}
                 <Grid item style={{ ...verticalCenter, textAlign: 'left' }} xs={12} md={6}>
                     <Box>
-                        <Typography sx={{fontWeight: 500 }} variant="h3">
+                        <Typography sx={{fontWeight: 500 , mt: 3 }} variant="h3">
                             Buy Your Favourite <br />
                             Bike 
                         </Typography>

@@ -64,7 +64,7 @@ const Footer = () => {
                         <Typography variant="h5"  style={{ color: 'whitesmoke' }}>
                             Message Us
                         </Typography>
-                        <Box sx={{backgroundColor: '#CCD1D1', padding: "10px" ,mt: 4, mb: 5, borderRadius: '10px'}}>
+                        <Box sx={{backgroundColor: '#CCD1D1', padding: "10px" ,mt: 4, mb: 5, textAlign: 'center', borderRadius: '10px'}}>
                             <TextField id="filled-basic" label="Name" variant="filled" /> <br/>
                             <TextField id="filled-basic" label="Email" variant="filled" /> <br/>
                             <TextField id="filled-basic" label="Phone" variant="filled" /> <br/>
@@ -78,7 +78,7 @@ const Footer = () => {
              
              {/* footer last part */}
                 <Box sx={{paddinTop: '20px'}}> 
-                        <Typography variant="h5" style={{ color: 'white' , background: '#40383A', padding: '30px' }}>
+                        <Typography variant="h5" style={{ color: 'white' , background: '#40383A', padding: '30px' , textAlign: 'center' }}>
                            Copyright © 2021 MOTOZ by Saleh. All rights reserved.
                         </Typography>
                  </Box>
