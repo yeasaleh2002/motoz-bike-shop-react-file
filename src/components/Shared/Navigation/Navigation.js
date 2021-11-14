@@ -164,6 +164,14 @@ export default function Navigation() {
                               <NavLink style={{textDecoration: 'none', color: 'white'}} to="/dashboard"><Button color="inherit">Dashboard</Button> </NavLink>
                               </ListItemText >           
                            </ListItem>
+                           <Divider />
+          
+                           <ListItem button >
+                             <ListItemText >
+                              <NavLink style={{textDecoration: 'none', color: 'white'}} to="/dashboard"><Button color="inherit">{user.displayName}</Button> </NavLink>
+                              </ListItemText >           
+                           </ListItem>
+                           <Divider />
           
 
                            <ListItem button >
@@ -171,6 +179,8 @@ export default function Navigation() {
                              <Button style={{ color: 'white'}} onClick={logOut} color="inherit">Log Out</Button> 
                              </ListItemText >           
                            </ListItem>
+                           
+        
                         </>
                         
                         :
@@ -224,6 +234,7 @@ export default function Navigation() {
                         user?.email ?
                         <>
                               <NavLink style={{textDecoration: 'none', color: 'white'}} to="/dashboard"><Button color="inherit">Dashboard</Button> </NavLink>                           
+                              <span style={{fontSize: 20}}>{user.displayName}</span>
                              <Button onClick={logOut} color="inherit">Log Out</Button> 
                         </>
                         :

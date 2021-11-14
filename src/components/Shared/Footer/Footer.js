@@ -69,7 +69,7 @@ const Footer = () => {
                             <TextField id="filled-basic" label="Email" variant="filled" /> <br/>
                             <TextField id="filled-basic" label="Phone" variant="filled" /> <br/>
                             <TextField id="filled-basic" label="Message" variant="filled" /> <br/>
-                            <Button sx={{marginTop: '10px'}} variant="contained">Contained</Button>               
+                            <Button sx={{marginTop: '10px'}} variant="contained">Message</Button>               
                         </Box>  
                   </Grid>
                 </Grid>              

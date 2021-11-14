@@ -15,6 +15,7 @@ import Footer from './components/Shared/Footer/Footer';
 import Navigation from './components/Shared/Navigation/Navigation';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import Purchase from './components/Products/Purchase/Purchase';
 
 
 function App() {
@@ -35,9 +36,14 @@ function App() {
                   <Home />
                 </Route>
 
-                <PrivateRoute path="/products">
+                <Route path="/products">
                   <Products />
-                </PrivateRoute>
+                </Route>
+
+                <PrivateRoute path="/purchase/:purchaseId">
+                    <Purchase></Purchase>
+                  </PrivateRoute>
+
 
                 <Route path="/contact">
                   <Contact />
