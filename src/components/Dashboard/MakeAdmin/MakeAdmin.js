@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Rating = () => {
+const MakeAdmin = () => {
     return (
         <div>
-            <h1>Rating</h1>
+            <h1>Admin</h1>
         </div>
     );
 };
 
-export default Rating;
+export default MakeAdmin;
