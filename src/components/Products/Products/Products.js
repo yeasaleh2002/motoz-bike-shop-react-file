@@ -26,7 +26,7 @@ const [products, setProducts ] = useState([]);
                 <Grid container spacing={2}>
                     {
                        products.map(product => <Product
-                            key = {product.key}
+                            key = {product._id}
                             product = {product}  
                                                 
                         >

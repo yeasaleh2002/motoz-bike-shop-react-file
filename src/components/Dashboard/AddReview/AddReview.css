@@ -1,0 +1,16 @@
+.add-review form {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.add-review form input, textarea {
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.submit-button {
+    color: white;
+    background-color: tomato;
+}
