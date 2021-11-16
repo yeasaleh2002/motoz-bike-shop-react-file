@@ -1,0 +1,16 @@
+.add-product form {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.add-product form input, textarea {
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.submit-button {
+    color: white;
+    background-color: tomato;
+}
