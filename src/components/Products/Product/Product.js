@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Product = ({product}) => {
 
-    const {_id, name, picture, company, about, price} = product;
+    const {_id, name, picture, company, about, price} = product || '';
 
 
 

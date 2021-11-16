@@ -2,11 +2,13 @@ import { Container, Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Review from '../Review/Review';
 
+
+
+
+
 const Reviews = () => {
 
-
-
-        
+      
 // useState declare
 const [reviews, setReviews ] = useState([]);
 
@@ -16,6 +18,7 @@ const [reviews, setReviews ] = useState([]);
       fetch(`http://localhost:5000/reviews`)
       .then(response => response.json())
       .then(data => setReviews(data))
+            // .then(data => console.log(data))
  }, [])
 
 
@@ -29,7 +32,7 @@ const [reviews, setReviews ] = useState([]);
             <Grid container spacing={2}>
                 {
                    reviews.map(review => <Review
-                        key = {review.key}
+                        key = {review._id}
                         review = {review}  
                                             
                     >

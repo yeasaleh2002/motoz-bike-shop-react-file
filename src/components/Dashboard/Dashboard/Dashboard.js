@@ -73,7 +73,8 @@ function Dashboard(props) {
        } 
       
       <Divider />
-      <Button onClick={logOut} color="inherit">Log Out</Button>  <Divider />
+      <Link  style={{textDecoration: 'none'}}  to="/home"> <Button onClick={logOut} color="inherit">Log Out</Button> </Link><Divider />
+        <Divider />
 
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
