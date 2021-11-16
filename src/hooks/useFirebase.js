@@ -19,9 +19,9 @@ const useFirebase = () => {
        // error state declare
      const [authError, setAuthError] = useState('');
 
-     /* // check admin state declare
+     // check admin state declare
      const [admin , setAdmin] = useState(false);
- */
+
 
      // getAuth declare
      const auth = getAuth();
@@ -41,8 +41,8 @@ const useFirebase = () => {
          const newUser = {email: email, displayName: name};
          setUser(newUser);
 
-        /* // save user to the database in register time
-           saveUser(email, name) */
+        // save user to the database in register time
+           saveUser(email, name)
             
         // replace register user in home page
         history.replace('/');
@@ -117,13 +117,14 @@ const useFirebase = () => {
         } , [])
 
 
-      /*   // -------- check admin useEffect declare -----------
+
+        // -------- check admin useEffect declare -----------
           useEffect( () => {
              fetch(`http://localhost:5000/users/${user.email}`)
              .then(res => res.json())
              .then(data => setAdmin(data.admin))
           } , [user.email])
- */
+
 
 
      // handle logOut function working
@@ -134,12 +135,12 @@ const useFirebase = () => {
           }).catch((error) => {
             // An error happened.
           })
-           // set is loading using
+           // set is loading 
          .finally( () => setIsLoading(false));
      }
 
 
-    /*  // save users information in database
+     // save users information in database
      const saveUser = (email, displayName) => {
            const user = {email, displayName};
            fetch('http://localhost:5000/users', {
@@ -152,12 +153,12 @@ const useFirebase = () => {
             .then()
      }
 
- */
+ 
 
      return {
              
          user,
-        // admin,
+         admin,
          isLoading,
          authError,
          registerUser,
