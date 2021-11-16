@@ -1,3 +1,61 @@
+# Website Name: MoToZ
+
+# Live Website Link: 
+
+
+# Short description: Motoz is an online bike shop.
+
+
+
+
+
+# Website feature:
+
+1. Motoz is an online bike shop.
+
+2. Navigation, service, banner, footer, contact have been used on the home page of the website.
+
+3. From Navigation, the user will be able to go to the product and view the product. And will be able to order the product.
+
+4. If you go to the purchase component, the user will be able to order with the address and phone number
+
+5. If you go to about, you will be able to know the details about us.
+
+6. The user must be logged in to order the product.
+
+7. If the user is logged in, he can go to the dashboard
+
+8. Go to dashboard and see all his orders on my order page.
+
+9. He will be able to review by going to add review.
+
+10. Go to Payment and order payment option has been kept.
+
+11. And if the admin logs in, he will see the Manage All Order page, Manage Product page.
+
+12. You can add product from add product component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

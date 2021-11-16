@@ -60,9 +60,13 @@ function Dashboard(props) {
       <Link  style={{textDecoration: 'none'}}  to="/home"> <Button color="inherit">Home</Button> </Link><Divider />
       <Link  style={{textDecoration: 'none'}}  to="/products"> <Button color="inherit">Products</Button> </Link> <Divider />        
       <Link  style={{textDecoration: 'none'}}  to={`${url}`}> <Button color="inherit">Dashboard</Button> </Link><Divider />
-      <Link  style={{textDecoration: 'none'}}  to={`${url}/myOrders`}> <Button color="inherit">My Order</Button> </Link><Divider />
-      <Link  style={{textDecoration: 'none'}}  to={`${url}/addReview`}> <Button color="inherit">Add Review</Button> </Link><Divider />
-       <Link  style={{textDecoration: 'none'}}  to={`${url}/payment`}> <Button color="inherit">Payment</Button> </Link><Divider />
+       {  !admin && <Box>
+
+                <Link  style={{textDecoration: 'none'}}  to={`${url}/myOrders`}> <Button color="inherit">My Order</Button> </Link><Divider />
+                <Link  style={{textDecoration: 'none'}}  to={`${url}/addReview`}> <Button color="inherit">Add Review</Button> </Link><Divider />
+                <Link  style={{textDecoration: 'none'}}  to={`${url}/payment`}> <Button color="inherit">Payment</Button> </Link><Divider />
+           </Box>
+       }
           
           { admin &&  <Box>
                  <Link  style={{textDecoration: 'none'}}  to={`${url}/makeAdmin`}> <Button color="inherit">Make Admin</Button> </Link><Divider />
