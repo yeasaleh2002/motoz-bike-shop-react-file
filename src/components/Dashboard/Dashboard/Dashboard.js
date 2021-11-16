@@ -44,7 +44,7 @@ function Dashboard(props) {
   let { path, url } = useRouteMatch();
   
   // import admin from useAuth
-  const { admin } = useAuth(); 
+  const { admin, logOut } = useAuth(); 
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -73,6 +73,7 @@ function Dashboard(props) {
        } 
       
       <Divider />
+      <Button onClick={logOut} color="inherit">Log Out</Button>  <Divider />
 
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
