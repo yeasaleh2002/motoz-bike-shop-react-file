@@ -19,12 +19,16 @@ import Purchase from './components/Products/Purchase/Purchase';
 
 
 function App() {
+
+
   return (
     <div className="App">
       <AuthProvider>
         <Router>
-
-              <Navigation/>
+           
+           
+                <Navigation/>
+             
 
               <Switch>
 

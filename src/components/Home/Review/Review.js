@@ -11,7 +11,6 @@ const Review = ({review}) => {
 
 
 
-
     return (
       
 
@@ -19,7 +18,7 @@ const Review = ({review}) => {
         <Paper elevation={3} sx={{p: 2}}>
                 
                          
-                         <Box>
+                         <Box  sx={{'& > legend': { mt: 2 },}}>
                             <Rating  name="simple-controlled" value={reviewValue}/>
                        </Box>
                         <Typography sx={{color: 'info.main', fontWeight: 'bold'}} variant="h6" gutterBottom component="div">

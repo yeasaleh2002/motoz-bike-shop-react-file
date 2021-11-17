@@ -84,7 +84,7 @@ const useFirebase = () => {
         .then((userCredential) => {
         
           // redirect login user after login
-          const destination = location?.state?.from || '/';
+          const destination = location?.state?.from || '/dashboard';
           history.replace(destination);
 
           setAuthError('');
