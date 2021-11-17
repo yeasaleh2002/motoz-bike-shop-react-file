@@ -27,6 +27,9 @@ const MyOrders = () => {
 
   
     const handleDelete = (id) => {
+
+      const proceed = window.confirm('Are you sure, you want to Cancle Order?');
+      if (proceed) {
       fetch(`http://localhost:5000/orders/${id}`, {
         method: "DELETE"
       })
@@ -38,7 +41,7 @@ const MyOrders = () => {
             setMyOrder(remaining);
           }
         });
- 
+      };
     }; 
 
 

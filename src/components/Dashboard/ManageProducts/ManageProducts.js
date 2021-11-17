@@ -1,4 +1,4 @@
-import { Button, CardContent, CardMedia, CircularProgress, Container, Grid, Paper, Typography } from '@mui/material';
+import { Button, CardContent, CardMedia,  Container, Grid, Paper, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
 
@@ -20,6 +20,9 @@ import React, { useEffect, useState } from 'react';
 
 
             const handleManageOrder = (id) => {
+               
+                const proceed = window.confirm('Are you sure, you want to delete?');
+                if (proceed) {
                 fetch(`http://localhost:5000/products/${id}`, {
                   method: "DELETE"
                 })
@@ -31,7 +34,7 @@ import React, { useEffect, useState } from 'react';
                       setManageProducts(remaining);
                     }
                   });
-           
+                };
               }; 
           
           
@@ -44,7 +47,7 @@ import React, { useEffect, useState } from 'react';
                     {
                        manageProducts.map(manageProduct => <Grid item xs={12} sm={6} md={4}
                             key = {manageProduct._id}
-                            manageProduct = {manageProduct}  
+                            manageproduct = {manageProduct}  
                             
                                                 
                         >
@@ -74,7 +77,7 @@ import React, { useEffect, useState } from 'react';
                                         </Typography>
                                         
                             
-                                {/* purchase button */}
+                                {/* delete button */}
                                     <Button onClick={() => handleManageOrder(manageProduct._id)} variant="contained">Delete Product</Button>
 
                              </CardContent>       
