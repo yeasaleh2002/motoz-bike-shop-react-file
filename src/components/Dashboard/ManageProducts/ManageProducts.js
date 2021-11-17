@@ -1,10 +1,11 @@
-import { Button, CardContent, CardMedia, Container, Grid, Paper, Typography } from '@mui/material';
+import { Button, CardContent, CardMedia, CircularProgress, Container, Grid, Paper, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
 
    const ManageProducts = () => {
 
         
+
             // useState declare
             const [manageProducts, setManageProducts ] = useState([]);
 
@@ -35,8 +36,6 @@ import React, { useEffect, useState } from 'react';
           
           
 
-
-
     return (
         <Container sx={{my: 8}}> 
             <Typography sx={{my: 5, color: 'info.main', fontWeight: '400'}} variant="h4">Manage Products</Typography>
@@ -46,42 +45,44 @@ import React, { useEffect, useState } from 'react';
                        manageProducts.map(manageProduct => <Grid item xs={12} sm={6} md={4}
                             key = {manageProduct._id}
                             manageProduct = {manageProduct}  
+                            
                                                 
                         >
+                            
                         
-              <Paper elevation={3} sx={{py: 1}}>
+                     <Paper elevation={3} sx={{py: 1}}>
                
-                      <CardMedia
-                            component="img"
-                            style={{ width: '100%', height: '100%', margin: '0 auto' }}
-                            image={manageProduct.picture}
-                            alt="green iguana"
-                        />
+                                    <CardMedia
+                                            component="img"
+                                            style={{ width: '100%', height: '100%', margin: '0 auto' }}
+                                            image={manageProduct.picture}
+                                            alt="green iguana"
+                                        />
 
-                        <CardContent>
-                        <Typography sx={{color: 'info.main', fontWeight: 'bold'}} variant="h4" gutterBottom component="div">
-                                {manageProduct.name}
-                        </Typography>
-                        <Typography variant="h6" gutterBottom component="div">
-                                Price: ${manageProduct.price}
-                        </Typography>
-                        <Typography variant="h6" gutterBottom component="div">
-                             brand: {manageProduct.company}
-                        </Typography>
-                        <Typography variant="caption" display="block" gutterBottom >
-                        {manageProduct.about.slice(0, 205)}.
-                        </Typography>
-                        
-             
-                   {/* purchase button */}
-                    <Button onClick={() => handleManageOrder(manageProduct._id)} variant="contained">Delete Product</Button>
-                                       
-                        </CardContent>
-         
-              </Paper>                            
-                        </Grid>)
+                                <CardContent>
+                                        <Typography sx={{color: 'info.main', fontWeight: 'bold'}} variant="h4" gutterBottom component="div">
+                                                {manageProduct.name}
+                                        </Typography>
+                                        <Typography variant="h6" gutterBottom component="div">
+                                                Price: ${manageProduct.price}
+                                        </Typography>
+                                        <Typography variant="h6" gutterBottom component="div">
+                                            brand: {manageProduct.company}
+                                        </Typography>
+                                        <Typography variant="caption" display="block" gutterBottom >
+                                        {manageProduct.about.slice(0, 205)}.
+                                        </Typography>
+                                        
+                            
+                                {/* purchase button */}
+                                    <Button onClick={() => handleManageOrder(manageProduct._id)} variant="contained">Delete Product</Button>
+
+                             </CardContent>       
+                    </Paper>                                         
+                  </Grid>)                      
                     }
-                 </Grid>
+
+                 </Grid>                
         </Container>
     );
 };

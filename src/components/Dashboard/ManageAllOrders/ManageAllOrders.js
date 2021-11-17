@@ -1,4 +1,4 @@
-/* import React from 'react';
+import React from 'react';
 
 const ManageAllOrders = () => {
     return (
@@ -8,4 +8,4 @@ const ManageAllOrders = () => {
     );
 };
 
-export default ManageAllOrders; */
+export default ManageAllOrders;
