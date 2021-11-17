@@ -31,6 +31,7 @@ import Payment from '../Payment/Payment';
 import ManageProducts from '../ManageProducts/ManageProducts';
 import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+import DashBoardHome from '../DashBoardHome/DashBoardHome';
 
 
 
@@ -162,7 +163,7 @@ function Dashboard(props) {
         {/* using nested routing */}
         <Switch>
         <Route exact path={path}>
-          <MyOrders></MyOrders>
+          <DashBoardHome></DashBoardHome>
         </Route>
      
         <Route path={`${path}/myOrders`}>

@@ -4,8 +4,6 @@ import Review from '../Review/Review';
 
 
 
-
-
 const Reviews = () => {
 
       
@@ -15,14 +13,11 @@ const [reviews, setReviews ] = useState([]);
 
 // data load from database
  useEffect(() => {
-      fetch(`http://localhost:5000/reviews`)
+      fetch(`https://sleepy-escarpment-80710.herokuapp.com/reviews`)
       .then(response => response.json())
       .then(data => setReviews(data))
-            // .then(data => console.log(data))
+            
  }, [])
-
-
-
 
 
     return (

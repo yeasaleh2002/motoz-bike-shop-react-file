@@ -21,19 +21,15 @@ const Login = () => {
 
         const field = event.target.name;
         const value = event.target.value;
-        console.log(field, value)
 
-        // password o email ar data ak sate object akar a paite ... use kora hoise.
         const newLoginData = {...loginData};
         newLoginData[field] = value;
         setLoginData(newLoginData);
-       // event.preventDefault();
     }
 
     const handleLoginSubmit = event => {
          
         loginUser(loginData.email, loginData.password , location, history);
-
         event.preventDefault();
     }
  

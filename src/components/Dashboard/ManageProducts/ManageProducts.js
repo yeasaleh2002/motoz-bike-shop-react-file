@@ -12,7 +12,7 @@ import React, { useEffect, useState } from 'react';
 
             // data load from database
             useEffect(() => {
-                fetch(`http://localhost:5000/products`)
+                fetch(`https://sleepy-escarpment-80710.herokuapp.com/products`)
                 .then(response => response.json())
                 .then(data => setManageProducts(data))
             }, [])
@@ -23,7 +23,7 @@ import React, { useEffect, useState } from 'react';
                
                 const proceed = window.confirm('Are you sure, you want to delete?');
                 if (proceed) {
-                fetch(`http://localhost:5000/products/${id}`, {
+                fetch(`https://sleepy-escarpment-80710.herokuapp.com/products/${id}`, {
                   method: "DELETE"
                 })
                   .then((res) => res.json())

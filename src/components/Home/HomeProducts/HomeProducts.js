@@ -12,7 +12,7 @@ const [products, setProducts ] = useState([]);
 
 // data load from database
  useEffect(() => {
-      fetch(`http://localhost:5000/products`)
+      fetch(`https://sleepy-escarpment-80710.herokuapp.com/products`)
       .then(response => response.json())
       .then(data => setProducts(data))
  }, [])
@@ -26,7 +26,7 @@ const [products, setProducts ] = useState([]);
                         
                 <Grid container spacing={2}>
                     {
-                       products. slice(1, 7).map(product => <Product
+                           products.slice(1, 7).map(product => <Product
                             key = {product._id}
                             product = {product}  
                                                 

@@ -114,13 +114,13 @@ const useFirebase = () => {
                   setIsLoading(false);                 
               });
                return () => unsubscribe;
-        } , [])
+        } , [auth])
 
 
 
         // -------- check admin useEffect declare -----------
           useEffect( () => {
-             fetch(`http://localhost:5000/users/${user.email}`)
+             fetch(`https://sleepy-escarpment-80710.herokuapp.com/users/${user.email}`)
              .then(res => res.json())
              .then(data => setAdmin(data.admin))
           } , [user.email])
@@ -143,7 +143,7 @@ const useFirebase = () => {
      // save users information in database
      const saveUser = (email, displayName) => {
            const user = {email, displayName};
-           fetch('http://localhost:5000/users', {
+           fetch('https://sleepy-escarpment-80710.herokuapp.com/users', {
              method: 'POST',
              headers: {
                'content-type' : 'application/json'

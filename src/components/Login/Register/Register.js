@@ -21,9 +21,7 @@ const Register = () => {
     const handleOnBlur = event => {
         const field = event.target.name;
         const value = event.target.value;
-        console.log(field, value)
-
-        
+      
         const newLoginData = {...loginData};
         newLoginData[field] = value;
         setLoginData(newLoginData);

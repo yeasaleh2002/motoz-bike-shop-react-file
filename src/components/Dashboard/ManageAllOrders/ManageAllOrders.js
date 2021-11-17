@@ -17,7 +17,7 @@ const ManageAllOrders = () => {
 
 
     useEffect( () => {
-        const url = `http://localhost:5000/orders`
+        const url = `https://sleepy-escarpment-80710.herokuapp.com/orders`
         fetch(url)
         .then( res => res.json())
         .then( data => setMyOrder(data))
@@ -26,9 +26,9 @@ const ManageAllOrders = () => {
   
     const handleDelete = (id) => {
 
-      const proceed = window.confirm('Are you sure, you want to Cancle Order?');
+      const proceed = window.confirm('Are you sure, you want to Delete Order?');
       if (proceed) {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://sleepy-escarpment-80710.herokuapp.com/orders/${id}`, {
         method: "DELETE"
       })
         .then((res) => res.json())
@@ -72,7 +72,7 @@ const ManageAllOrders = () => {
               <TableCell align="right">{row.email}</TableCell>
               <TableCell align="right">{row.phone}</TableCell>
               <TableCell align="right">{row.address}</TableCell>
-              <TableCell align="right"><Button variant="contained" onClick={() => handleDelete(row._id)}> Cancle Order </Button></TableCell>
+              <TableCell align="right"><Button variant="contained" onClick={() => handleDelete(row._id)}> Delete Order </Button></TableCell>
                    </TableRow>
           ))}
         </TableBody>

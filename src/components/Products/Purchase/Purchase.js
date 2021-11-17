@@ -28,11 +28,11 @@ const Purchase = () => {
 
    // load data
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${purchaseId}`)
+        fetch(`https://sleepy-escarpment-80710.herokuapp.com/products/${purchaseId}`)
           .then(res => res.json())
         
           .then(data => setPurchase(data));
-      }, []); 
+      }, [purchaseId]); 
 
 
   // handle on Blur 
@@ -42,7 +42,6 @@ const Purchase = () => {
         const newInfo = {...orderInfo};
         newInfo[field] = value;
         setOrderInfo(newInfo);
-        console.log(newInfo);
      
     } 
 
@@ -50,8 +49,10 @@ const Purchase = () => {
 
 
       const handlePurchase = event => {
-        alert ('Purchasing');
 
+   
+    
+        alert ('Purchasing');
 
         // collect data
         const order = {
@@ -59,11 +60,11 @@ const Purchase = () => {
           purchaseId,
           orderName: purchase.name,
       }
-         console.log(order)
-
+        
+      event.status = 'Pending'
 
          // send to the server 
-        fetch('http://localhost:5000/oders', {
+        fetch('https://sleepy-escarpment-80710.herokuapp.com/oders', {
           method: 'POST',
           headers: {
             'content-type' : 'application/json'

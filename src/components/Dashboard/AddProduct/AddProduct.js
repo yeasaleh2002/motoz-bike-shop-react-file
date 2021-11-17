@@ -15,7 +15,7 @@ const AddProduct = () => {
    /* onSubmit handle declare */
    const onSubmit = data => {
        console.log(data);
-       axios.post('http://localhost:5000/products', data )
+       axios.post('https://sleepy-escarpment-80710.herokuapp.com/products', data )
        .then(res => {
            if(res.data.insertedId) {
                alert('added successfully');

@@ -4,11 +4,9 @@ import { Box } from '@mui/system';
 
 
 
-
 const Review = ({review}) => {
 
     const {userName, about, reviewValue} = review || '';
-
 
 
     return (

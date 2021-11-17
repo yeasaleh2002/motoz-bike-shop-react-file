@@ -19,18 +19,18 @@ const MyOrders = () => {
 
 
     useEffect( () => {
-        const url = `http://localhost:5000/orders?email=${user.email}`
+        const url = `https://sleepy-escarpment-80710.herokuapp.com/orders?email=${user.email}`
         fetch(url)
         .then( res => res.json())
         .then( data => setMyOrder(data))
-    } , [])
+    } , [user.email])
 
   
     const handleDelete = (id) => {
 
       const proceed = window.confirm('Are you sure, you want to Cancle Order?');
       if (proceed) {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://sleepy-escarpment-80710.herokuapp.com/orders/${id}`, {
         method: "DELETE"
       })
         .then((res) => res.json())
