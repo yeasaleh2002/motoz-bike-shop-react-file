@@ -14,7 +14,7 @@ const Purchase = () => {
     const { purchaseId } = useParams();
 
     // initial state declare
-    const initialInfo = {userName: user.displayName, email: user.email, phone: '', address: ''}
+    const initialInfo = {userName: user.displayName, email: user.email, phone: '', address: '', status : 'Pending'}
 
     // order info state declare
     const [orderInfo, setOrderInfo] = useState(initialInfo);
@@ -61,7 +61,7 @@ const Purchase = () => {
           orderName: purchase.name,
       }
         
-      event.status = 'Pending'
+    
 
          // send to the server 
         fetch('https://sleepy-escarpment-80710.herokuapp.com/oders', {

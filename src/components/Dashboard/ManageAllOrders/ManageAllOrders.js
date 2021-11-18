@@ -10,9 +10,9 @@ import { Button } from '@mui/material';
 
 
 const ManageAllOrders = () => {
+/* 
 
-
-    const [myOrder, setMyOrder] = useState([]);
+    const [manageAllOrders, setManageAllOrders] = useState([]);
 
 
 
@@ -20,7 +20,7 @@ const ManageAllOrders = () => {
         const url = `https://sleepy-escarpment-80710.herokuapp.com/orders`
         fetch(url)
         .then( res => res.json())
-        .then( data => setMyOrder(data))
+        .then( data => setManageAllOrders(data))
     } , [])
 
   
@@ -34,21 +34,21 @@ const ManageAllOrders = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount) {
-            alert ('Cancle Order')
-            const remaining = myOrder.filter(row => row._id !==id);
-            setMyOrder(remaining);
+            alert ('Delete Order')
+            const remaining = manageAllOrders.filter(row => row._id !==id);
+            setManageAllOrders(remaining);
           }
         });
       };
     }; 
-
+ */
 
     return (
         <div>
-            <h1>Total Orders: {myOrder.length}</h1>
+           {/*  <h1>Total Orders: {manageAllOrders.length}</h1>
 
             <TableContainer sx={{mb: 12}} component={Paper}>
-      <Table aria-label="myOrders table">
+      <Table aria-label="ManageAllOrders table">
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
@@ -60,7 +60,7 @@ const ManageAllOrders = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {myOrder.map((row) => (
+          {manageAllOrders.map((row) => (
             <TableRow
               key={row._id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -77,7 +77,9 @@ const ManageAllOrders = () => {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+    </TableContainer> */}
+
+       <h1>Manage all orders</h1>
         </div>
     );
 };
