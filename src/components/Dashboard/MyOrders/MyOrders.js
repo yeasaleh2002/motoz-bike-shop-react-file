@@ -19,6 +19,7 @@ const MyOrders = () => {
 
 
     useEffect( () => {
+        // const url = `http://localhost:5000/orders?email=${user.email}`
         const url = `https://sleepy-escarpment-80710.herokuapp.com/orders?email=${user.email}`
         fetch(url)
         .then( res => res.json())

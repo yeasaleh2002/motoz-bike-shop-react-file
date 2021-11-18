@@ -10,7 +10,7 @@ import { Button } from '@mui/material';
 
 
 const ManageAllOrders = () => {
-/* 
+
 
     const [manageAllOrders, setManageAllOrders] = useState([]);
 
@@ -41,11 +41,11 @@ const ManageAllOrders = () => {
         });
       };
     }; 
- */
+
 
     return (
         <div>
-           {/*  <h1>Total Orders: {manageAllOrders.length}</h1>
+            <h1>Total Orders: {manageAllOrders.length}</h1>
 
             <TableContainer sx={{mb: 12}} component={Paper}>
       <Table aria-label="ManageAllOrders table">
@@ -77,9 +77,7 @@ const ManageAllOrders = () => {
           ))}
         </TableBody>
       </Table>
-    </TableContainer> */}
-
-       <h1>Manage all orders</h1>
+    </TableContainer>
         </div>
     );
 };
