@@ -17,7 +17,7 @@ const ManageAllOrders = () => {
 
 
     useEffect( () => {
-        const url = `https://sleepy-escarpment-80710.herokuapp.com/orders`
+        const url = `https://sleepy-escarpment-80710.herokuapp.com/oders`
         fetch(url)
         .then( res => res.json())
         .then( data => setManageAllOrders(data))
@@ -28,7 +28,7 @@ const ManageAllOrders = () => {
 
       const proceed = window.confirm('Are you sure, you want to Delete Order?');
       if (proceed) {
-      fetch(`https://sleepy-escarpment-80710.herokuapp.com/orders/${id}`, {
+      fetch(`https://sleepy-escarpment-80710.herokuapp.com/oders/${id}`, {
         method: "DELETE"
       })
         .then((res) => res.json())
@@ -56,6 +56,7 @@ const ManageAllOrders = () => {
             <TableCell align="right">Email</TableCell>
             <TableCell align="right">phone</TableCell>
             <TableCell align="right">Address</TableCell>
+            <TableCell align="right">Status</TableCell>
             <TableCell align="right">Action</TableCell>         
           </TableRow>
         </TableHead>
@@ -72,6 +73,7 @@ const ManageAllOrders = () => {
               <TableCell align="right">{row.email}</TableCell>
               <TableCell align="right">{row.phone}</TableCell>
               <TableCell align="right">{row.address}</TableCell>
+              <TableCell align="right">{row.status}</TableCell>
               <TableCell align="right"><Button variant="contained" onClick={() => handleDelete(row._id)}> Delete Order </Button></TableCell>
                    </TableRow>
           ))}

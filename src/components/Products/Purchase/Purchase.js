@@ -148,6 +148,7 @@ const Purchase = () => {
               />
 
               <TextField
+                  disabled
                   sx={{width: "85%", m: 1}}            
                   id="outlined-size-small"
                   name="email"

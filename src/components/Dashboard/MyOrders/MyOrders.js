@@ -19,8 +19,8 @@ const MyOrders = () => {
 
 
     useEffect( () => {
-        // const url = `http://localhost:5000/orders?email=${user.email}`
-        const url = `https://sleepy-escarpment-80710.herokuapp.com/orders?email=${user.email}`
+     
+        const url = `https://sleepy-escarpment-80710.herokuapp.com/oders?email=${user.email}`
         fetch(url)
         .then( res => res.json())
         .then( data => setMyOrder(data))
@@ -31,7 +31,7 @@ const MyOrders = () => {
 
       const proceed = window.confirm('Are you sure, you want to Cancle Order?');
       if (proceed) {
-      fetch(`https://sleepy-escarpment-80710.herokuapp.com/orders/${id}`, {
+      fetch(`https://sleepy-escarpment-80710.herokuapp.com/oders/${id}`, {
         method: "DELETE"
       })
         .then((res) => res.json())
@@ -59,6 +59,7 @@ const MyOrders = () => {
             <TableCell align="right">Email</TableCell>
             <TableCell align="right">phone</TableCell>
             <TableCell align="right">Address</TableCell>
+            <TableCell align="right">Status</TableCell>
             <TableCell align="right">Action</TableCell>         
           </TableRow>
         </TableHead>
@@ -75,6 +76,7 @@ const MyOrders = () => {
               <TableCell align="right">{row.email}</TableCell>
               <TableCell align="right">{row.phone}</TableCell>
               <TableCell align="right">{row.address}</TableCell>
+              <TableCell align="right">{row.status}</TableCell>
               <TableCell align="right"><Button variant="contained" onClick={() => handleDelete(row._id)}> Cancle Order </Button></TableCell>
                    </TableRow>
           ))}
