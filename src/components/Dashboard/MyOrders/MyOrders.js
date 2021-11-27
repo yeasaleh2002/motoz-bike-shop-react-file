@@ -21,7 +21,8 @@ const MyOrders = () => {
          // useEffect 
     useEffect( () => {
      
-        const url = `https://sleepy-escarpment-80710.herokuapp.com/oders?email=${user.email}`
+        // const url = `https://sleepy-escarpment-80710.herokuapp.com/oders?email=${user.email}`
+        const url = `https://sleepy-escarpment-80710.herokuapp.com/oders/${user.email}`
         fetch(url)
         .then( res => res.json())
         .then( data => setMyOrder(data))
